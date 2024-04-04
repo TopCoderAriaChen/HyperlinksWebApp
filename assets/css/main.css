@@ -3,9 +3,23 @@ html,
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
   font-size: var(--font-size);
 }
-
+body {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #e2e2e2;
+}
+.container {
+  min-width: 600px;
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  flex: 1;
+  flex-basis: auto;
+}
 *,
 :after,
 :before {
@@ -16,4 +30,8 @@ body {
   display: flex;
   width: 100%;
   justify-content: center;
+  flex-shrink: 0;
+  position: fixed;
+  top: 0;
+  background-color: #e2e2e2;
 }

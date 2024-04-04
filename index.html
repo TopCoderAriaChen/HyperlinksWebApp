@@ -5,15 +5,117 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>What are hyperlinks?</title>
-  <meta name="description" content="Hyperlinks, usually called links, are a foundational concept behind the Web. To explain what links are, we need to step back to the very basics of Web architecture.">
+  <meta name="description"
+    content="Hyperlinks, usually called links, are a foundational concept behind the Web. To explain what links are, we need to step back to the very basics of Web architecture.">
   <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
   <script src="../../assets/js/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
   <!-- Header Menu -->
   <use-menu class="menu"></use-menu>
+  <div class="container">
+    <aside>
+      <div class="document-toc-container">
+        <section class="document-toc">
+          <header>
+            <h2 class="document-toc-heading">Anchors nav</h2>
+          </header>
+          <ul class="document-toc-list">
+            <li class="document-toc-item"><a class="document-toc-link" href="#summary" aria-current="true">Summary</a>
+            </li>
+            <li class="document-toc-item"><a class="document-toc-link" href="#typesOfLinks">Types of links</a></li>
+          </ul>
+        </section>
+      </div>
+    </aside>
+    <main>
+      <header>
+        <h1>What are hyperlinks?</h1>
+      </header>
+      <section aria-labelledby="summary">
+        <h2 id="summary"><a href="#summary">#Summary</a></h2>
+        <div class="section-content">
+          <p>Hyperlinks, usually called links, are a foundational concept behind the Web. To explain what links are, we
+            need to step back to the very basics of Web architecture.</p>
+          <p>Back in 1989, Tim Berners-Lee, the Web's inventor, spoke of the three pillars on which the Web stands:</p>
+          <ol>
+            <li>URL, an address system that keeps track of Web documents</li>
+            <li>HTTP, a transfer protocol to find documents when given their URLs
+            </li>
+            <li>HTML, a document format allowing for embedded <em>hyperlinks</em>
+            </li>
+          </ol>
+          <p>As you can see in the three pillars, everything on the Web revolves around documents and how to access
+            them.
+            The Web's original purpose was to provide an easy way to reach, read, and navigate through text documents.
+            Since then, the Web has evolved to provide access to images, videos, and binary data, but these improvements
+            have hardly changed the three pillars.</p>
+          <p>Before the Web, it was quite hard to access documents and move from one to another. Being human-readable,
+            URLs already made things easier, but it's hard to type a long URL whenever you want to access a document.
+            This
+            is where hyperlinks revolutionized everything. Links can correlate any text string with a URL, such that the
+            user can instantly reach the target document by activating the link.</p>
+          <p>Links stand out from the surrounding text by being underlined and in blue text. Tap or click a link to
+            activate it, or if you use a keyboard, press Tab until the link is in focus and hit Enter or Spacebar.</p>
+          <p>
+            <img src="./assets/image/link-1.png" alt="Example of a basic display and effect of a link in a web page"
+              width="477" height="492" loading="lazy">
+          </p>
+          <p>Links are the breakthrough that made the Web so useful and successful. In the rest of this article, we
+            discuss the various types of links and their importance to modern Web design.</p>
+          <h3>Give it a try to get started</h3>
+          <p class="shaking"><a href="./author.html">Click me</a></p>
+        </div>
+      </section>
+      <section aria-labelledby="typesOfLinks">
+        <h2 id="typesOfLinks"><a href="#typesOfLinks">#Types of links</a></h2>
+        <div class="section-content">
+          <dl>
+            <dt id="internal_link"><a href="#internal_link">Internal link</a></dt>
+            <dd>
+              <p>A link between two webpages, where both webpages belong to the same website, is called an internal
+                link. Without internal links, there's no such thing as a website (unless, of course, it's a one-page
+                website).</p>
+              <h3>Give it a try to get started</h3>
+              <p class="shaking"><a href="./author.html">Click me</a></p>
+            </dd>
+            <dt id="external_link"><a href="#external_link">External link</a></dt>
+            <dd>
+              <p>A link from your webpage to someone else's webpage. Without external links, there is no Web, since the
+                Web is a network of webpages. Use external links to provide information besides the content available
+                through your webpage.</p>
+            </dd>
+            <dt id="incoming_links"><a href="#incoming_links">Incoming links</a></dt>
+            <dd>
+              <p>A link from someone else's webpage to your site. It's the opposite of an external link. Note that you
+                don't have to link back when someone links to your site.</p>
+              <h3>Give it a try to get started</h3>
+              <p class="shaking"><a href="https://github.com/">Click me</a></p>
+            </dd>
+            <dt id="anchors"><a href="#anchors">Anchors</a></dt>
+            <dd>
+              <p>Most links tie two webpages together. <strong>Anchors</strong> tie two sections of one document
+                together. When you follow a link pointing to an anchor, your browser jumps to another part of the
+                current document instead of loading a new document. However, you make and use anchors the same way as
+                other links.</p>
+              <p>
+                <img src="./assets/image/link-2.png"
+                  alt="Example of a basic display and effect of an anchor in a web page" width="477" height="492"
+                  loading="lazy">
+              </p>
+              <h3>Give it a try to get started</h3>
+              <p class="shaking"><a href="#summary"># Click me</a></p>
+            </dd>
+          </dl>
+
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 <script src="./components/main.js"></script>
+<script src="./assets/js/index.js"></script>
 
 </html>

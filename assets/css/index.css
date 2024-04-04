@@ -1,0 +1,84 @@
+/* Control horizontal movement jitter effect through x-axis movement of translate3d */
+@keyframes shaking {
+
+  10%,
+  90% {
+    transform: translate3d(-1.2px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  70% {
+    transform: translate3d(-4.8px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4.8px, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(-4.8px, 0, 0);
+  }
+}
+
+
+
+aside {
+  font-style: 0;
+  width: 200px;
+}
+
+.document-toc-container {
+  position: fixed;
+  top: 100px;
+}
+
+.document-toc-heading {
+  letter-spacing: 1.5px;
+  margin: 0 0 1rem;
+  color: #4e4e4e;
+}
+
+.document-toc-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.document-toc-link.document-toc-link {
+  border-left: 2px solid #cdcdcd;
+  color: #4e4e4e;
+  display: block;
+  padding: .5rem 1rem;
+  text-decoration: none;
+}
+
+.document-toc-link.document-toc-link[aria-current]:not([aria-current=""]):not([aria-current=false]) {
+    background-color: var(--color-danger-hover);
+    border-left: 2px solid var(--color-danger);
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.document-toc-link.document-toc-link:hover {
+  color: var(--color-primary);
+}
+
+main {
+  padding: 20px;
+  flex: 1;
+}
+
+main .section-content {
+  line-height: 36px;
+}
+
+.shaking {
+  animation: shaking 1.2s ease-in-out infinite;
+  animation-play-state: running;
+  transform-origin: bottom;
+}
