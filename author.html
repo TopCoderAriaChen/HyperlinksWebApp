@@ -4,15 +4,161 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What are hyperlinks?</title>
-  <meta name="description" content="Hyperlinks, usually called links, are a foundational concept behind the Web. To explain what links are, we need to step back to the very basics of Web architecture.">
+  <title>Author</title>
+  <meta name="description"
+    content="Hyperlinks, usually called links, are a foundational concept behind the Web. To explain what links are, we need to step back to the very basics of Web architecture.">
   <link rel="stylesheet" href="./assets/css/main.css">
-  <script src="../../assets/js/jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/author.css">
+  <script src="./assets/js/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
   <!-- Header Menu -->
   <use-menu class="menu"></use-menu>
+  <div class="container">
+    <header>
+      <div class="information-container">
+        <div class="people">
+          <img src="./assets/image/author/people.png" alt="people">
+        </div>
+        <div>
+          <div class="contact">
+            <div class="item">
+              
+              <div class="cell">
+                <div class="label">tel</div>
+                <div class="text">0414556666</div>
+              </div>
+              <div class="cell">
+                <div class="label">add</div>
+                <div class="text">Nedlands, WA 6000</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="cell">
+                <div class="label">link</div>
+                <div class="text">
+                  <a href="https://www.linkedin.com/in/aria-chen124/" target="_blank" rel="noopener noreferrer">linkedin</a>
+                </div>
+              </div>
+              <div class="cell">
+                <div class="label">link</div>
+                <div class="text">
+                  <a href="https://github.com/AriaChen124" target="_blank" rel="noopener noreferrer">github</a>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="cell">
+                <div class="label">eml</div>
+                <div class="text">aria.chen.124@gmail.com</div>
+              </div>
+            </div>
+          </div>
+          <div class="educational">
+            <div class="card" style="position: relative; z-index: 1;">
+              <use-card>
+                <span slot="header">EDUCATION</span>
+                <div class="title">University of Western Australia</div>
+                <div class="content">
+                  <div class="text" style="margin-bottom: 14px;">
+                    <span>2022-PRESENT</span>
+                  </div>
+                  <div class="text">
+                    <span>Master of Information Technology</span>
+                  </div>
+                </div>
+              </use-card>
+            </div>
+            <div class="card" style="transform: translate(-22px, 40px); position: relative; z-index: 0;">
+              <use-card hide-header>
+                <div class="title">University of Melbourne</div>
+                <div class="content">
+                  <div class="text" style="margin-bottom: 14px;">
+                    <span>2019-2021</span>
+                  </div>
+                  <div class="text">
+                    <span>Bachelor of Science</span>
+                  </div>
+                </div>
+              </use-card>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="name">
+        <span style="font-size: 80px; font-weight: 700; margin-right: 28px;">Aria Chen</span>
+        <span style="color: rgba(58, 58, 60, 1); font-size: 24px;">Full-Stack Web Develope</span>
+      </div>
+    </header>
+    <main>
+      <section>
+        <use-card>
+          <span slot="header">PROFILE</span>
+          <div class="content">
+            <p>Current IT student with progressive experience writing code and designing solutions.  Seeking a challenging role as a Software Engineering Intern. Adept at working effectively in fast-paced, deadline-driven settings that demand strong organizational and analytical skills.</p>
+          </div>
+        </use-card>
+      </section>
+      <section>
+        <use-card>
+          <span slot="header">SKILLS</span>
+          <div class="content">
+            <ul>
+              <li class="text">Web frameworks React (JSX, Virtual DOM, Native, Node.js).</li>
+              <li class="text">HTML5, CSS3/SASS.</li>
+              <li class="text">Flask (with Jinja2 templating).</li>
+              <li class="text">CI/CD & DevOps.</li>
+              <li class="text">SEO Integration.</li>
+              <li class="text">Git.</li>
+              <li class="text">Docker.</li>
+              <li class="text">AWS Cloud Services.</li>
+              <li class="text">Communication skills.</li>
+              <li class="text">Teamwork.</li>
+            </ul>
+          </div>
+        </use-card>
+      </section>
+      <section>
+        <use-card>
+          <span slot="header">Experience</span>
+          <div class="content">
+            <div class="title">
+              <span>MOXUE Education Technology Pty Led, Melbourne, VIC</span>
+              <span>Front-end React Developer, Internship</span>
+              <span>Dec 2023 - FEB 2024</span>
+            </div>
+            <ul>
+              <li class="text">Used understanding of React fundamentals to promote better component lifecycle practices, increasing turnaround speed by 23% with 100% deadline adherence.</li>
+              <li class="text">Communicated with other teams and senior management to adapt 5 clients’ websites to adapt to changing industry standards.</li>
+              <li class="text">Introduced wider use of isomorphic React and Node.js for web applications, decreasing load times by roughly 35%.</li>
+              <li class="text">Followed documentation to always remain up-to-speed on what needs to be updated in response to new release versions.</li>
+            </ul>
+          </div>
+        </use-card>
+      </section>
+      <section>
+        <use-card>
+          <span slot="header">Projects</span>
+          <div class="content">
+            <div class="title">
+              <span>Little Things for Tiny Tots Charity, Perth,WA</span>
+              <span>Volunteer Training Platform Development</span>
+              <span>July 2023 - Oct 2023</span>
+            </div>
+            <ul>
+              <li class="text">Organized development tasks and coordinated with a team of five, ensuring timely delivery and consistent code quality, leading to the successful launch of the platform.</li>
+              <li class="text">Developed specific modules in both front-end and back-end, focusing on user registration, login, management, and navigation.</li>
+              <li class="text">Utilized Flask, HTML/CSS/JavaScript to craft key application features and integrated a secure user authentication system.</li>
+              <li class="text">Designed a dynamic Jinja2 front-end that delivers personalized content based on user roles, enhancing user experience and platform efficiency.</li>
+              <li class="text">Introduced a secure logout feature and initiated the front-end design for a file upload page.</li>
+              <li class="text">Analyzed user roles and requirements to design a dynamic front-end that delivers personalized content, enhancing user experience and platform </li>
+            </ul>
+          </div>
+        </use-card>
+      </section>
+    </main>
+  </div>
 </body>
 <script src="./components/main.js"></script>
 
