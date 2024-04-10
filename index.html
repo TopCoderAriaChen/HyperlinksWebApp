@@ -26,6 +26,8 @@
             <li class="document-toc-item"><a class="document-toc-link" href="#summary" aria-current="true">Summary</a>
             </li>
             <li class="document-toc-item"><a class="document-toc-link" href="#typesOfLinks">Types of links</a></li>
+            <li class="document-toc-item"><a class="document-toc-link" href="#applicationsInCode">Applications in
+                code</a></li>
           </ul>
         </section>
       </div>
@@ -47,6 +49,15 @@
             <li>HTML, a document format allowing for embedded <em>hyperlinks</em>
             </li>
           </ol>
+          <div class="notecard note">
+            <p>
+              <strong>Note:</strong> A URL can point to HTML files, text files, images, text documents, video and audio
+              files, or anything else that lives on the Web.
+              If the web browser doesn't know how to display or handle the file, it will ask you if you want to open the
+              file (in which case the duty of opening or handling the file is passed to a suitable native app on the
+              device) or download the file (in which case you can try to deal with it later on).
+            </p>
+          </div>
           <p>As you can see in the three pillars, everything on the Web revolves around documents and how to access
             them.
             The Web's original purpose was to provide an easy way to reach, read, and navigate through text documents.
@@ -57,12 +68,20 @@
             This
             is where hyperlinks revolutionized everything. Links can correlate any text string with a URL, such that the
             user can instantly reach the target document by activating the link.</p>
+          <p>For example, the BBC homepage contains many links that point not only to multiple news stories, but also
+            different areas of the site (navigation functionality), login/registration pages (user tools), and more.</p>
+          <p>
+            <img src="./assets/image/index/updated-bbc-website.png"
+              alt="front page of bbc.co.uk, showing many news items, and navigation menu functionality" width="700"
+              height="453" loading="lazy">
+          </p>
           <p>Links stand out from the surrounding text by being underlined and in blue text. Tap or click a link to
             activate it, or if you use a keyboard, press Tab until the link is in focus and hit Enter or Spacebar.</p>
           <p>
-            <img src="./assets/image/link-1.png" alt="Example of a basic display and effect of a link in a web page"
+            <img src="./assets/image/index/link-1.png" alt="Example of a basic display and effect of a link in a web page"
               width="477" height="492" loading="lazy">
           </p>
+
           <p>Links are the breakthrough that made the Web so useful and successful. In the rest of this article, we
             discuss the various types of links and their importance to modern Web design.</p>
           <h3>Give it a try to get started</h3>
@@ -101,7 +120,7 @@
                 current document instead of loading a new document. However, you make and use anchors the same way as
                 other links.</p>
               <p>
-                <img src="./assets/image/link-2.png"
+                <img src="./assets/image/index/link-2.png"
                   alt="Example of a basic display and effect of an anchor in a web page" width="477" height="492"
                   loading="lazy">
               </p>
@@ -110,6 +129,30 @@
             </dd>
           </dl>
 
+        </div>
+      </section>
+      <section aria-labelledby="applicationsInCode">
+        <h2 id="applicationsInCode"><a href="#applicationsInCode">#Applications in code</a></h2>
+        <div class="section-content">
+          <p>A basic link is created by wrapping the text or other content inside an <a
+              href="/en-US/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a> element and using the <a
+              href="/en-US/docs/Web/HTML/Element/a#href"><code>href</code></a> attribute, also known as a
+            <strong>Hypertext Reference</strong>, or <strong>target</strong>, that contains the web address.
+          </p>
+          <div class="code-example">
+            <div class="example-header">
+              <span class="language-name">html</span>
+            </div>
+            <pre>
+            <code>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>
+  I'm creating a link to
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://github.com/<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>the github homepage<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>.
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+            </code>
+          </pre>
+          </div>
+          <p>This gives us the following result:<br>I'm creating a link to <a href="https://github.com/" class="external" target="_blank">the github homepage</a>.</p>
         </div>
       </section>
     </main>
