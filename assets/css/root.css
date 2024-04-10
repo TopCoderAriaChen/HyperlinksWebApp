@@ -1,6 +1,8 @@
 :root {
   --font-size: 16px;
   --color-primary: rgba(64, 158, 255, 1);
+  --color-primary-hover: rgba(64, 158, 255, 0.6);
   --color-danger: rgba(245, 108, 108, 1);
   --color-danger-hover: rgba(245, 108, 108, 0.6);
+  --color-success: rgba(103, 194, 58, 1);
 }
