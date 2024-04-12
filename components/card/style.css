@@ -1,19 +1,21 @@
-.card {
+:host {
+  position: relative;
+}
+
+.body {
   min-width: 306px;
   min-height: 204px;
   padding: 40px 26px;
   background: rgba(240, 240, 240, 1);
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
-  position: relative;
   border-left: 10px solid rgba(58, 58, 60, 1);
   box-sizing: border-box;
-  
 }
 
 .header {
   position: absolute;
   top: 0;
-  left: -9.5px;
+  left: 0;
   transform: translateY(-50%);
   padding: 10px 24px;
   border-top-right-radius: 20px;

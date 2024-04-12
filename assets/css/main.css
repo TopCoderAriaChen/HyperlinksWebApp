@@ -41,50 +41,36 @@ body {
   background-color: #e2e2e2;
 }
 
-.code-example {
-  color: #4e4e4e;
-  margin-bottom: 2rem;
-  position: relative;
+/* Control horizontal movement jitter effect through x-axis movement of translate3d */
+@keyframes shaking {
+
+  10%,
+  90% {
+    transform: translate3d(-1.2px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  70% {
+    transform: translate3d(-4.8px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4.8px, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(-4.8px, 0, 0);
+  }
 }
 
-.code-example,
-code,
-pre {
-  border-radius: 0.25rem;
-  font-size: 0.833rem;
-  color: #efefef;
-  font-weight: bolder;
-}
-
-.code-example .example-header {
-  align-items: baseline;
-  background-color: var(--color-primary);
-  border-bottom: 1px solid #ccc;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin: 0;
-  padding: .1rem 1rem;
-}
-
-.code-example .example-header~iframe,
-.code-example .example-header~pre {
-  border-top: none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  margin-top: 0;
-}
-
-pre {
-  background-color: var(--color-primary);
-  border: 1px solid transparent;
-  margin: 1rem 0 2rem;
-  padding: 0 2.5rem 0 1rem;
-  white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
-  word-wrap: break-word;
+.shaking {
+  animation: shaking 1.2s ease-in-out infinite;
+  animation-play-state: running;
+  transform-origin: bottom;
 }

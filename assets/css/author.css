@@ -1,14 +1,14 @@
 @font-face {
   font-family: 'MiSans';
-  src: url(../font/MiSans/otf/MiSans-Bold.otf);
+  src: url(../font/MiSans/ttf/MiSans-Bold.ttf);
 }
 
 .container {
   justify-content: center;
   font-family: 'MiSans';
   width: 1190px;
-  background: url(../image/author/background.png) no-repeat;
-  background-size: 100% 100%;
+  background: url(../image/author/background.png) no-repeat, #fff;
+  background-size: 100% auto;
   display: block;
   margin: 20px auto;
   padding: 0 0 20px 0;  
@@ -36,23 +36,27 @@
 }
 
 .contact {
-  width: 630px;
   height: 156px;
   background: rgba(58, 58, 60, 1);
-  padding: 38px 64px;
+  padding: 12px 64px;
   display: flex;
+  flex-direction: column;
 }
 
 .contact .item {
-  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .contact .cell {
   display: flex;
   align-items: center;
+  flex-wrap: nowrap;
+  flex: 1;
 }
 
-.contact .cell + .cell {
+.contact .item + .item {
   margin-top: 18px;
 }
 
@@ -74,6 +78,7 @@
   font-weight: 500;
   color: rgba(255, 255, 255, 1);
   margin-left: 16px;
+  text-wrap: nowrap;
 }
 
 .educational {
@@ -118,4 +123,18 @@ main ul li + li {
 
 main section + section {
   margin-top: 60px;
+}
+
+.content p {
+  line-height: 30px;
+  color: rgba(99, 99, 99, 1);
+}
+
+.content .title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content .text {
+  color: rgba(99, 99, 99, 1);
 }

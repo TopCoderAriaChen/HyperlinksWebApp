@@ -7,14 +7,13 @@ class UseCard extends HTMLElement {
       <style>
         @import url(./components/card/style.css);
       </style>
-      <div class="card">
-        ${ hideHeader ? '' :
-          `<div class="header">
-            <slot name="header"></slot>
-          </div>` }
-        <div class="body">
-          <slot></slot>
-        </div>
+      ${ hideHeader ? '' :
+        `<div class="header">
+          <slot name="header"></slot>
+        </div>` }
+      
+      <div class="body">
+        <slot></slot>
       </div>
     `);
   }
