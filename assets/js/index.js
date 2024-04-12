@@ -28,3 +28,39 @@ $(window).scroll(function () {
   // sets the aria-current attribute of the link at the active index to true.
   $(documentTocLinks[activeIndex]).attr('aria-current', 'true');
 });
+
+function getUrlParam(name = '') {
+  let params = window.location.search.split('?')[1] || ''
+  if (params) {
+    params = params.split('&')
+  }
+  let paramsObj = {}
+  for (let i = 0; i < params.length; i++) {
+    let temp = params[i].split('=')
+    paramsObj[temp[0]] = temp[1]
+  }
+  if (name) {
+    return paramsObj[name]
+  } else {
+    return paramsObj
+  }
+}
+if (getUrlParam('name') == 'A') $('.note').hide()
+
+function handleClcik() {
+  $.ajax({
+    url: 'https://api.github.com/users',
+    type: 'get',
+    success: function (res) {
+      alert(JSON.stringify(res.map(i => i.id)))
+      if (res.findIndex(i => i.id == 1) > -1) {
+        $('.note').hide()
+      }
+    }
+  });
+
+}
+
+function foldHandleClcik(el) {
+  $(el).parent().toggleClass('open')
+}

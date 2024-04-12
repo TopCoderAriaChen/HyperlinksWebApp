@@ -1,32 +1,13 @@
-/* Control horizontal movement jitter effect through x-axis movement of translate3d */
-@keyframes shaking {
 
-  10%,
-  90% {
-    transform: translate3d(-1.2px, 0, 0);
-  }
 
-  20%,
-  80% {
-    transform: translate3d(2px, 0, 0);
-  }
-
-  30%,
-  70% {
-    transform: translate3d(-4.8px, 0, 0);
-  }
-
-  40%,
-  60% {
-    transform: translate3d(4.8px, 0, 0);
-  }
-
-  50% {
-    transform: translate3d(-4.8px, 0, 0);
-  }
+.container {
+  background: url(../image/index/freecompress-main.png);
+  margin: 0;
 }
 
-
+.menu {
+  background: url(../image/index/freecompress-main.png);
+}
 
 aside {
   font-style: 0;
@@ -77,6 +58,10 @@ main .section-content {
   line-height: 36px;
 }
 
+main > section {
+  margin-top: 60px;
+}
+
 .notecard {
   margin: 2rem 0;
   background: var(--color-primary-hover);
@@ -90,8 +75,113 @@ main .section-content {
   position: relative;
 }
 
-.shaking {
-  animation: shaking 1.2s ease-in-out infinite;
-  animation-play-state: running;
-  transform-origin: bottom;
+
+
+.card-header a {
+  color: #fff;
+  text-decoration: none;
 }
+
+.card-header a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: right;
+  padding-right: 36px;
+  padding-bottom: 1px;
+}
+
+.fold-header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.fold-header h3 {
+  padding: 0;
+  margin: 0;
+}
+
+.fold-body {
+  height: 0;
+  transition: height 0.3s ease;
+  overflow: hidden;
+}
+
+.fold-panel.open .fold-body {
+  height: auto;
+}
+
+.fold-body button {
+  background-color: var(--color-primary);
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  padding: 12px;
+}
+
+.arrow {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border:#000 solid;
+  border-width: 1px 1px 0 0;
+  transform: rotate(135deg);
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.fold-panel.open .arrow {
+  transform: rotate(-45deg);
+}
+
+.code-example {
+  color: #4e4e4e;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.code-example,
+.code-example code,
+.code-example pre {
+  border-radius: 0.25rem;
+  font-size: 0.833rem;
+  color: #efefef;
+  font-weight: bolder;
+}
+
+.code-example .example-header {
+  align-items: baseline;
+  background-color: var(--color-primary);
+  border-bottom: 1px solid #ccc;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0;
+  padding: .1rem 1rem;
+}
+
+.code-example .example-header~iframe,
+.code-example .example-header~pre {
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: 0;
+}
+
+.code-example pre {
+  background-color: var(--color-primary);
+  border: 1px solid transparent;
+  margin: 1rem 0 2rem;
+  padding: 0 2.5rem 0 1rem;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+

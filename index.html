@@ -9,7 +9,7 @@
     content="Hyperlinks, usually called links, are a foundational concept behind the Web. To explain what links are, we need to step back to the very basics of Web architecture.">
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="stylesheet" href="./assets/css/index.css">
-  <script src="../../assets/js/jquery-3.7.1.min.js"></script>
+  <script src="./assets/js/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
@@ -37,126 +37,176 @@
         <h1>What are hyperlinks?</h1>
       </header>
       <section aria-labelledby="summary">
-        <h2 id="summary"><a href="#summary">#Summary</a></h2>
-        <div class="section-content">
-          <p>Hyperlinks, usually called links, are a foundational concept behind the Web. To explain what links are, we
-            need to step back to the very basics of Web architecture.</p>
-          <p>Back in 1989, Tim Berners-Lee, the Web's inventor, spoke of the three pillars on which the Web stands:</p>
-          <ol>
-            <li>URL, an address system that keeps track of Web documents</li>
-            <li>HTTP, a transfer protocol to find documents when given their URLs
-            </li>
-            <li>HTML, a document format allowing for embedded <em>hyperlinks</em>
-            </li>
-          </ol>
-          <div class="notecard note">
-            <p>
-              <strong>Note:</strong> A URL can point to HTML files, text files, images, text documents, video and audio
-              files, or anything else that lives on the Web.
-              If the web browser doesn't know how to display or handle the file, it will ask you if you want to open the
-              file (in which case the duty of opening or handling the file is passed to a suitable native app on the
-              device) or download the file (in which case you can try to deal with it later on).
-            </p>
-          </div>
-          <p>As you can see in the three pillars, everything on the Web revolves around documents and how to access
-            them.
-            The Web's original purpose was to provide an easy way to reach, read, and navigate through text documents.
-            Since then, the Web has evolved to provide access to images, videos, and binary data, but these improvements
-            have hardly changed the three pillars.</p>
-          <p>Before the Web, it was quite hard to access documents and move from one to another. Being human-readable,
-            URLs already made things easier, but it's hard to type a long URL whenever you want to access a document.
-            This
-            is where hyperlinks revolutionized everything. Links can correlate any text string with a URL, such that the
-            user can instantly reach the target document by activating the link.</p>
-          <p>For example, the BBC homepage contains many links that point not only to multiple news stories, but also
-            different areas of the site (navigation functionality), login/registration pages (user tools), and more.</p>
-          <p>
-            <img src="./assets/image/index/updated-bbc-website.png"
-              alt="front page of bbc.co.uk, showing many news items, and navigation menu functionality" width="700"
-              height="453" loading="lazy">
-          </p>
-          <p>Links stand out from the surrounding text by being underlined and in blue text. Tap or click a link to
-            activate it, or if you use a keyboard, press Tab until the link is in focus and hit Enter or Spacebar.</p>
-          <p>
-            <img src="./assets/image/index/link-1.png" alt="Example of a basic display and effect of a link in a web page"
-              width="477" height="492" loading="lazy">
-          </p>
+        <use-card>
+          <div id="summary" class="card-header" slot="header"><a href="#summary">Summary</a></div>
+          <div class="content">
+            <div class="section-content">
+              <p>Hyperlinks, usually called links, are a foundational concept behind the Web. To explain what links are,
+                we
+                need to step back to the very basics of Web architecture.</p>
+              <p>Back in 1989, Tim Berners-Lee, the Web's inventor, spoke of the three pillars on which the Web stands:
+              </p>
+              <ol>
+                <li>URL, an address system that keeps track of Web documents</li>
+                <li>HTTP, a transfer protocol to find documents when given their URLs
+                </li>
+                <li>HTML, a document format allowing for embedded <em>hyperlinks</em>
+                </li>
+              </ol>
+              <div class="notecard note">
+                <p>
+                  <strong>Note:</strong>
+                <p>Of course, hyperlinks can only be used for synchronous requests such as downloading documents. Other
+                  types of requests like POST and DELETE cannot be used, and it is not possible to make any changes to
+                  the current page. Any change on the page requires redirecting to a new page. However, we can use Ajax
+                  to achieve partial page refreshing.</p>
+                <p>
+                  Asynchronous JavaScript and XML (Ajax, or AJAX) is a web development technique in which a web app
+                  fetches content from the server by making asynchronous HTTP requests, and uses the new content to
+                  update the relevant parts of the page without requiring a full page load. This can make the page more
+                  responsive, because only the parts that need to be updated are requested.
 
-          <p>Links are the breakthrough that made the Web so useful and successful. In the rest of this article, we
-            discuss the various types of links and their importance to modern Web design.</p>
-          <h3>Give it a try to get started</h3>
-          <p class="shaking"><a href="./author.html">Click me</a></p>
-        </div>
-      </section>
-      <section aria-labelledby="typesOfLinks">
-        <h2 id="typesOfLinks"><a href="#typesOfLinks">#Types of links</a></h2>
-        <div class="section-content">
-          <dl>
-            <dt id="internal_link"><a href="#internal_link">Internal link</a></dt>
-            <dd>
-              <p>A link between two webpages, where both webpages belong to the same website, is called an internal
-                link. Without internal links, there's no such thing as a website (unless, of course, it's a one-page
-                website).</p>
-              <h3>Give it a try to get started</h3>
-              <p class="shaking"><a href="./author.html">Click me</a></p>
-            </dd>
-            <dt id="external_link"><a href="#external_link">External link</a></dt>
-            <dd>
-              <p>A link from your webpage to someone else's webpage. Without external links, there is no Web, since the
-                Web is a network of webpages. Use external links to provide information besides the content available
-                through your webpage.</p>
-            </dd>
-            <dt id="incoming_links"><a href="#incoming_links">Incoming links</a></dt>
-            <dd>
-              <p>A link from someone else's webpage to your site. It's the opposite of an external link. Note that you
-                don't have to link back when someone links to your site.</p>
-              <h3>Give it a try to get started</h3>
-              <p class="shaking"><a href="https://github.com/">Click me</a></p>
-            </dd>
-            <dt id="anchors"><a href="#anchors">Anchors</a></dt>
-            <dd>
-              <p>Most links tie two webpages together. <strong>Anchors</strong> tie two sections of one document
-                together. When you follow a link pointing to an anchor, your browser jumps to another part of the
-                current document instead of loading a new document. However, you make and use anchors the same way as
-                other links.</p>
+                  Ajax can be used to create single-page apps, in which the entire web app consists of a single
+                  document, which uses Ajax to update its content as needed.
+
+                  Initially Ajax was implemented using the XMLHttpRequest interface, but the fetch() API is more
+                  suitable for modern web applications: it is more powerful, more flexible, and integrates better with
+                  fundamental web app technologies such as service workers. Modern web frameworks also provide
+                  abstractions for Ajax.
+
+                </p>
+                <div class="fold-panel">
+                  <div class="fold-header" onclick="foldHandleClcik(this)">
+                    <h3>Here's an example: While all users can see this message, User A cannot see this information.</h3>
+                    <span class="arrow"></span>
+                  </div>
+                  <div class="fold-body">
+                    <h5>Using hyperlinks, if the URL contains the parameter "name" with a value of "A", then hide the content.</h5>
+                    <pre>
+<code>
+  &lt;a href="/index.html?name=A"&gt;"Go ahead and give it a try."&lt;/a&gt;
+</code>
+                  </pre>
+                    <div>
+                      <a href="/index.html?name=A">"Go ahead and give it a try."</a>
+                    </div>
+                    <h5>Using AJAX, if the requested data contains an ID of 1, then hide the content.</h5>
+                    <pre>
+<code>
+  $.ajax({
+    url: 'https://api.github.com/users',
+    type: 'get',
+    success: function (res) {
+      if (res.findIndex(i => i.id == 1) > -1) {
+        $('.note').hide()
+      }
+    }
+  });
+</code>
+                  </pre>
+                    <button onclick="handleClcik()">Go ahead and give it a try</button>
+                  </div>
+                </div>
+                </p>
+              </div>
+              <p>Links stand out from the surrounding text by being underlined and in blue text. Tap or click a link to
+                activate it, or if you use a keyboard, press Tab until the link is in focus and hit Enter or Spacebar.
+              </p>
               <p>
-                <img src="./assets/image/index/link-2.png"
-                  alt="Example of a basic display and effect of an anchor in a web page" width="477" height="492"
+                <img src="./assets/image/index/link-1.png"
+                  alt="Example of a basic display and effect of a link in a web page" width="477" height="492"
                   loading="lazy">
               </p>
-              <h3>Give it a try to get started</h3>
-              <p class="shaking"><a href="#summary"># Click me</a></p>
-            </dd>
-          </dl>
 
-        </div>
+              <p>Links are the breakthrough that made the Web so useful and successful. In the rest of this article, we
+                discuss the various types of links and their importance to modern Web design.</p>
+              <h3>Give it a try to get started</h3>
+              <p class="shaking"><a href="./author.html">Click me</a></p>
+            </div>
+          </div>
+        </use-card>
+      </section>
+      <section aria-labelledby="typesOfLinks">
+        <use-card>
+          <div id="typesOfLinks" class="card-header" slot="header"><a href="#typesOfLinks">Types of links</a></div>
+          <div class="section-content">
+            <dl>
+              <dt id="internal_link"><a href="#internal_link">Internal link</a></dt>
+              <dd>
+                <p>A link between two webpages, where both webpages belong to the same website, is called an internal
+                  link. Without internal links, there's no such thing as a website (unless, of course, it's a one-page
+                  website).</p>
+                <h3>Go ahead and give it a try</h3>
+                <p class="shaking"><a href="./author.html">Click me</a></p>
+              </dd>
+              <dt id="external_link"><a href="#external_link">External link</a></dt>
+              <dd>
+                <p>A link from your webpage to someone else's webpage. Without external links, there is no Web, since
+                  the
+                  Web is a network of webpages. Use external links to provide information besides the content available
+                  through your webpage.</p>
+              </dd>
+              <dt id="incoming_links"><a href="#incoming_links">Incoming links</a></dt>
+              <dd>
+                <p>A link from someone else's webpage to your site. It's the opposite of an external link. Note that you
+                  don't have to link back when someone links to your site.</p>
+                <h3>Go ahead and give it a try</h3>
+                <p class="shaking"><a href="https://github.com/">Click me</a></p>
+              </dd>
+              <dt id="anchors"><a href="#anchors">Anchors</a></dt>
+              <dd>
+                <p>Most links tie two webpages together. <strong>Anchors</strong> tie two sections of one document
+                  together. When you follow a link pointing to an anchor, your browser jumps to another part of the
+                  current document instead of loading a new document. However, you make and use anchors the same way as
+                  other links.</p>
+                <p>
+                  <img src="./assets/image/index/link-2.png"
+                    alt="Example of a basic display and effect of an anchor in a web page" width="477" height="492"
+                    loading="lazy">
+                </p>
+                <h3>Go ahead and give it a try</h3>
+                <p class="shaking"><a href="#summary"># Click me</a></p>
+              </dd>
+            </dl>
+
+          </div>
+        </use-card>
       </section>
       <section aria-labelledby="applicationsInCode">
-        <h2 id="applicationsInCode"><a href="#applicationsInCode">#Applications in code</a></h2>
-        <div class="section-content">
-          <p>A basic link is created by wrapping the text or other content inside an <a
-              href="/en-US/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a> element and using the <a
-              href="/en-US/docs/Web/HTML/Element/a#href"><code>href</code></a> attribute, also known as a
-            <strong>Hypertext Reference</strong>, or <strong>target</strong>, that contains the web address.
-          </p>
-          <div class="code-example">
-            <div class="example-header">
-              <span class="language-name">html</span>
+        <use-card>
+          <div id="applicationsInCode" class="card-header" slot="header"><a href="#applicationsInCode">Applications in
+              code</a></div>
+          <div class="section-content">
+            <p>A basic link is created by wrapping the text or other content inside an <a
+                href="/en-US/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a> element and using the <a
+                href="/en-US/docs/Web/HTML/Element/a#href"><code>href</code></a> attribute, also known as a
+              <strong>Hypertext Reference</strong>, or <strong>target</strong>, that contains the web address.
+            </p>
+            <div class="code-example">
+              <div class="example-header">
+                <span class="language-name">html</span>
+              </div>
+              <pre>
+              <code>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>
+    I'm creating a link to
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://github.com/<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>the github homepage<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>.
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+              </code>
+            </pre>
             </div>
-            <pre>
-            <code>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>
-  I'm creating a link to
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://github.com/<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>the github homepage<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>.
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
-            </code>
-          </pre>
+            <p>This gives us the following result:<br>I'm creating a link to <a href="https://github.com/"
+                class="external" target="_blank">the github homepage</a>.</p>
           </div>
-          <p>This gives us the following result:<br>I'm creating a link to <a href="https://github.com/" class="external" target="_blank">the github homepage</a>.</p>
-        </div>
+        </use-card>
       </section>
     </main>
   </div>
+  <footer>
+    <p><cite>This article is cited from <a
+          href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks"
+          target="_blank" rel="noopener noreferrer">What_are_hyperlinks</a></cite></p>
+  </footer>
 </body>
 <script src="./components/main.js"></script>
 <script src="./assets/js/index.js"></script>
