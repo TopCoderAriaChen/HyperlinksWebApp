@@ -1,0 +1,305 @@
+/*******Page flipping must start with style*******/
+@import url("./history/animations.css");
+html,
+body {
+	width: 100%;
+	height: 100%;
+	font-size: 16px;
+	color:#fff;
+}
+
+.menu {
+  background-color: initial;
+}
+
+body {
+	overflow: hidden;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+}
+
+.page-indicator li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.webppt-wrap,
+.page,
+.slide {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.content {
+  display: flex;
+	flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 60px;
+  /* transform: translateY(-80px); */
+  line-height: 36px;
+}
+
+.title {
+	width: 100%;
+	text-align: left;
+	font-size: 32px;
+}
+
+.page {
+  background-color: #090a0f;
+}
+
+.webppt-wrap {
+	position: relative;
+}
+
+.perspective {
+	/*The position of the perspective container is relative, so we add 1200 pixels of perspective to it*/
+	-webkit-perspective: 1200px;
+	-moz-perspective: 1200px;
+	-o-perspective: 1200px;
+	perspective: 1200px;
+}
+
+.threeD {
+	/*Hide the back of the rotated div element:*/
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	/* Chrome 和 Safari */
+	-moz-backface-visibility: hidden;
+	/* Firefox */
+	-ms-backface-visibility: hidden;
+	/* Internet Explorer */
+	transform: translate3d(0, 0, 0);
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	/*The transform style attribute is also commonly used in 3D effects, with two parameters: flat | preserve-3d. The former has a default value of flat, which represents the plane; The latter preserve-3d represents 3D perspective.*/
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.page,
+.slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 1;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+	z-index: 1;
+}
+
+.preload-bg {
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: -1;
+}
+
+
+/*Page centered*/
+
+.page-center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	/* Horizontal center alignment 50% is half of its own size */
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	z-index: 1;
+}
+
+
+/*align horizontal center*/
+
+.center {
+	position: absolute;
+	left: 50%;
+	/* Horizontal center alignment 50% is half of its own size */
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+
+/*align vertical center*/
+
+.vertical {
+	position: absolute;
+	top: 50%;
+	/* Horizontal center alignment 50% is half of its own size */
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	z-index: 1;
+}
+
+.page .slide-indicator {
+	position: absolute;
+	left: 50%;
+	/* Horizontal center alignment 50% is half of its own size */
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	bottom: 13%;
+	z-index: 10000;
+}
+
+.page .slide-indicator li {
+	width: 15px;
+	height: 15px;
+	line-height: 25px;
+	text-align: center;
+	border-radius: 50%;
+	background-color: #fff;
+	display: inline-block;
+	margin-right: 5px;
+	opacity: 0.5;
+	-webkit-opacity: 0.5;
+}
+
+.page .slide-indicator li.on {
+	background-color: gray;
+}
+
+.page-indicator {
+	position: absolute;
+	right: 1%;
+	top: 50%;
+	/*Vertical center alignment 50% is half of its own size */
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	z-index: 9999;
+}
+
+.page-indicator li {
+	width: 22px;
+	height: 22px;
+	line-height: 26px;
+	text-align: center;
+	border-radius: 50%;
+	background-color: #fff;
+	margin-bottom: 5px;
+	opacity: 0.7;
+	-webkit-opacity: 0.7;
+}
+
+.page-indicator li span {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin: auto;
+	border-radius: 50%;
+}
+
+.page-indicator li.on span {
+	background-color: #fff;
+}
+
+.img-up {
+	width: 50px;
+	height: 30px;border: 0;
+	position: absolute;
+	left: 50%;
+	bottom: 5%;
+	margin-left: -25px;
+	/*align horizontal center*/
+	z-index: 20000;		
+	background-position:0px -80px;
+}
+.img-left {
+	width: 30px;
+	height: 50px;border: 0;
+	position: absolute;
+	left: 2%;
+	bottom: 50%;
+	/*align horizontal center*/
+	z-index: 20000;		
+	background-position:0px -109px;
+}
+.img-right {
+	width: 30px;
+	height: 50px;border: 0;
+	position: absolute;
+	right: 4%;
+	bottom: 50%;
+	/*align horizontal center*/
+	z-index: 20000;		
+	background-position:-30px -109px;
+}
+/******Page flipping must end with style*********/
+
+
+.dialog {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+
+.tooltip {
+	position: relative;
+	display: inline-block;
+}
+
+.tooltip .tooltip-body {
+	display: none;
+	position: absolute;
+	background-color: #fff;
+	color: #000;
+	line-height: 20px;
+	font-size: 14px;
+	padding: 6px 12px;
+	left: 50%;
+	transform: translateX(-50%);
+	word-wrap:break-word;
+	word-break:break-all;
+	width: 200px;
+}
+
+.tooltip .tooltip-body::before {
+	content: '';
+	display: block;
+	width: 12px;
+	height: 12px;
+	background: #fff;
+	clip-path: polygon(0% 100%, 50% 0%, 100% 100%, 0% 100%);
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translate(-50%, -100%);
+}
+
+.tooltip:hover .tooltip-body {
+	display: block;
+}
+
+sup {
+	color: var(--color-primary);
+	cursor: pointer;
+}
+

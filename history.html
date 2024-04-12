@@ -5,15 +5,97 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>author</title>
-  <meta name="description" content="Hyperlinks, usually called links, are a foundational concept behind the Web. To explain what links are, we need to step back to the very basics of Web architecture.">
+  <meta name="description"
+    content="Hyperlinks, usually called links, are a foundational concept behind the Web. To explain what links are, we need to step back to the very basics of Web architecture.">
   <link rel="stylesheet" href="./assets/css/main.css">
-  <script src="../../assets/js/jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/history.css">
+  <script src="./assets/js/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
-  <!-- Header Menu -->
   <use-menu class="menu"></use-menu>
+  <main>
+    <div class="webppt-wrap">
+      <div class="page">
+        <div class="content" style="transform: translateY(-14%);">
+          <p style="font-size: 40px;">History of hyperlinks</p>
+          <p>The history of hyperlinks can be traced back to the 1960s. As computer technology and the internet have
+            evolved, so has the application and use of hyperlinks in the presentation and organization of material.
+            Below is an overview of the history of hyperlinks, as well as their key technologies and applications at
+            different times.</p>
+        </div>
+      </div>
+      <div class="page">
+        <div class="content" style="transform: translateY(-10%);">
+          <div class="title">The Origin of Hyperlinks</div>
+          <ul>
+            <li>Concept proposal - The concept of hyperlinks was first proposed by Ted Nelson in 1965, who envisioned a
+              global information space composed of hypertext in the "Xanadu" project.
+              <div class="tooltip">
+                <sup>[1]</sup>
+                <div class="tooltip-body">"Complex Information Processing: A File Structure for the Complex, the
+                  Changing, and the Indeterminate". Rettberg, Jill Walker. <a href="https://elmcip.net/node/7367"
+                    target="_blank" rel="noopener noreferrer">https://elmcip.net/node/7367</a></div>
+              </div>
+            </li>
+
+            <li>Early Implementations - Douglas Engelbart implemented an early form of hyperlinks in the "Augment
+              Project" in the late 1960s, demonstrating hypertext links for the first time in his 1968 "Mother of All
+              Demos."
+              <div class="tooltip">
+                <sup>[2]</sup>
+                <div class="tooltip-body">"the Doug Engelbart Institute website". Doug Engelbart Institue. <a
+                    href="http://www.dougengelbart.org/content/view/155/87/" target="_blank"
+                    rel="noopener noreferrer">http://www.dougengelbart.org/content/view/155/87/</a></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="page">
+        <div class="content">
+          <div class="title">The Development of Hyperlinks</div>
+          <ul>
+            <li>HTML and the World Wide Web - Hyperlinks truly became widespread with the invention of the World Wide
+              Web (WWW) and HTML (Hypertext Markup Language) by Tim Berners-Lee in 1991. In HTML, hyperlinks are
+              implemented using the <a> tag, marking the beginning of widespread use of hyperlinks on the internet.
+                <div class="tooltip">
+                  <sup>[3]</sup>
+                  <div class="tooltip-body">"The World's First Web Site". HISTORY. <a
+                      href="https://www.history.com/news/the-worlds-first-web-site" target="_blank"
+                      rel="noopener noreferrer">https://www.history.com/news/the-worlds-first-web-site</a></div>
+                </div>
+            </li>
+            <li>
+              <p>The Rise of Browsers - With the introduction of browsers like Netscape Navigator and Microsoft Internet
+                Explorer, hyperlinks began to appear in richer forms, including image links and dynamic effects.
+              <div class="tooltip">
+                <sup>[4]</sup>
+                <div class="tooltip-body">"Web 1.0". HistoryTools.org.<a
+                    href="https://www.historytools.org/concepts/web-1-0" target="_blank"
+                    rel="noopener noreferrer">https://www.historytools.org/concepts/web-1-0</a></div>
+              </div>
+              </p>
+              <p>
+                image link
+                <a href="./index.html" rel="noopener noreferrer">
+                  <img style="width: 100px;" src="./assets/image/index/link-1.png" alt="image link" />
+                </a>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- <footer>
+    <p><cite>This article is cited from <a href="https://en.m.wikipedia.org/wiki/Hyperlink" target="_blank"
+          rel="noopener noreferrer">Hyperlink - wikipedia</a></cite></p>
+  </footer> -->
+  <div class="dialog" onclick="closePreview()">
+  </div>
 </body>
 <script src="./components/main.js"></script>
+<script src="./assets/js/history.js"></script>
 
 </html>
