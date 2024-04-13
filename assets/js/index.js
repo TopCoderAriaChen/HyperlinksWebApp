@@ -23,6 +23,10 @@ $(window).scroll(function () {
     // If the scroll position is greater than the element's top offset, sets the active index to the current index.
     if (windowScrollPosition > elementOffsetTop) {
       activeIndex = i;
+    } else {
+      if ($(document).scrollTop() >= $(document).height() - $(window).height()) {
+        activeIndex = documentTocLinks.length - 1
+      }
     }
   });
   // sets the aria-current attribute of the link at the active index to true.
