@@ -45,12 +45,13 @@
 }
 
 .ribbon a:hover span {
-  background: #FFD204;
+  background: rgba(217, 235, 241);
   margin-top: 0;
 }
 
 .ribbon a .active {
   color: var(--color-primary);
+  font-weight: bold;
 }
 
 .ribbon span:before {

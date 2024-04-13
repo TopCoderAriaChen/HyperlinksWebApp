@@ -1,5 +1,3 @@
-
-
 .container {
   background: url(../image/index/freecompress-main.png);
   margin: 0;
@@ -126,7 +124,7 @@ footer {
   width: 10px;
   height: 10px;
   border:#000 solid;
-  border-width: 1px 1px 0 0;
+  border-width: 3px 3px 0 0;
   transform: rotate(135deg);
   margin-bottom: 10px;
   transition: all 0.3s ease;
