@@ -12,7 +12,7 @@ class UseMenu extends HTMLElement {
         @import url(./components/menu/style.css);
       </style>
       <div id="menu" class="ribbon">
-        <a href="./index.html"><span class="${ pathname == '/index.html' ? 'active' : '' }">Summary</span></a>
+        <a href="./index.html"><span class="${ pathname == '/index.html' ? 'active' : '' }">Overview</span></a>
         <a href="./history.html"><span class="${ pathname == '/history.html' ? 'active' : '' }">History</span></a>
         <a href="./author.html"><span class="${ pathname == '/author.html' ? 'active' : '' }">Author</span></a>
       </div>
