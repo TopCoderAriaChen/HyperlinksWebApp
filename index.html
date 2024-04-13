@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What are hyperlinks?</title>
+  <title>Understanding HyperLinks</title>
   <meta name="description"
     content="Hyperlinks, usually called links, are a foundational concept behind the Web. To explain what links are, we need to step back to the very basics of Web architecture.">
   <link rel="stylesheet" href="./assets/css/main.css">
@@ -26,61 +26,98 @@
             <li class="document-toc-item"><a class="document-toc-link" href="#overview" aria-current="true">Overview</a>
             </li>
             <li class="document-toc-item"><a class="document-toc-link" href="#typesOfHyperlinks">Types of Hyperlinks</a></li>
-            <li class="document-toc-item"><a class="document-toc-link" href="#implentationInHTML">Hyperlink Implentation</a></li>
+            <li class="document-toc-item"><a class="document-toc-link" href="#implementationInHTML">Hyperlink Implementation</a></li>
           </ul>
         </section>
       </div>
     </aside>
     <main>
       <header>
-        <h1>What are hyperlinks?</h1>
+        <h1>Exploring Hyperlinks in Web Development</h1>
       </header>
       <section aria-labelledby="overview">
         <use-card>
           <div id="overview" class="card-header" slot="header"><a href="#overview">Overview</a></div>
           <div class="content">
             <div class="section-content">
-              <p>Hyperlinks, usually called links, are a foundational concept behind the Web. To explain what links are,
-                we
-                need to step back to the very basics of Web architecture.</p>
-              <p>Back in 1989, Tim Berners-Lee, the Web's inventor, spoke of the three pillars on which the Web stands:
+              <h2>What are Hyperlinks? </h2>
+              <p> 
+                 Hyperlinks, usually called links, are the threads that weave together 
+                 the World Wide Web, creating an intricate tapestry of interconnected resources. 
+                 To explain what links are, we need to step back to the very basics of Web architecture.<br />
+                 At their core, links are directives embedded within web pages that guide users and browsers from one digital
+                 destination to another. <br />
+                 The inception of the web by Tim Berners-Lee in 1989 was marked by the introduction 
+                 of three fundamental technologies:
               </p>
               <ol>
-                <li>URL, an address system that keeps track of Web documents</li>
-                <li>HTTP, a transfer protocol to find documents when given their URLs
+                <li>URL which serve as unique identifiers for resources</li>
+                <li>HTTP as the protocol for transferring data across the web
                 </li>
-                <li>HTML, a document format allowing for embedded <em>hyperlinks</em>
+                <li>that structures content and enables the creation of <em>hyperlinks</em>
                 </li>
               </ol>
+              <p>Together, these components constructed the bedrock of the internet's navigational capabilities.</p>
+              <p>
+                In the web development context, hyperlinks are more than just pathways; they encapsulate user interaction, 
+                design paradigms, and the very essence of browsing. Although traditional hyperlinks initiate GET requests to 
+                retrieve documents, modern web applications often require a more dynamic approach. Here, AJAX (Asynchronous 
+                JavaScript and XML) comes into play, allowing for seamless interactions by making background HTTP requests 
+                without refreshing the entire page. This methodology enriches the user experience, fostering the development 
+                of responsive and adaptive web applications that react in real time to user input.
+              </p>
+              </ol>
               <div class="notecard note">
-                <p>
-                  <strong>Note:</strong>
-                <p>Of course, hyperlinks can only be used for synchronous requests such as downloading documents. Other
-                  types of requests like POST and DELETE cannot be used, and it is not possible to make any changes to
-                  the current page. Any change on the page requires redirecting to a new page. However, we can use Ajax
-                  to achieve partial page refreshing.</p>
-                <p>
-                  Asynchronous JavaScript and XML (Ajax, or AJAX) is a web development technique in which a web app
-                  fetches content from the server by making asynchronous HTTP requests, and uses the new content to
-                  update the relevant parts of the page without requiring a full page load. This can make the page more
-                  responsive, because only the parts that need to be updated are requested.
-
-                  Ajax can be used to create single-page apps, in which the entire web app consists of a single
-                  document, which uses Ajax to update its content as needed.
-
-                  Initially Ajax was implemented using the XMLHttpRequest interface, but the fetch() API is more
-                  suitable for modern web applications: it is more powerful, more flexible, and integrates better with
-                  fundamental web app technologies such as service workers. Modern web frameworks also provide
-                  abstractions for Ajax.
-
-                </p>
+                <p><h4>Note on Hyperlink Implementations:</h4></p>
+                <ul>
+                  <li>
+                  Traditional hyperlinks are constrained to GET requests, such as when a user clicks a link to download a document. 
+                  They cannot perform actions like POST or DELETE, which are essential in web applications for creating and removing 
+                  content. To bridge this gap, AJAX enables asynchronous interactions, providing a means to achieve partial page 
+                  refreshing. This functionality is key in creating sophisticated web experiences, such as single-page applications 
+                  that maintain a fluid user interface while communicating with the server in the background. Modern implementations 
+                  often utilize the Fetch API.
+                    <ul>
+                      <li>
+                        Asynchronous JavaScript and XML (Ajax, or AJAX) is a web development technique in which a web app
+                        fetches content from the server by making asynchronous HTTP requests, and uses the new content to
+                        update the relevant parts of the page without requiring a full page load. This can make the page more
+                        responsive, because only the parts that need to be updated are requested.
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        Ajax can be used to create single-page apps, in which the entire web app consists of a single
+                        document, which uses Ajax to update its content as needed.
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        Initially Ajax was implemented using the XMLHttpRequest interface, but the fetch() API is more
+                        suitable for modern web applications: it is more powerful, more flexible, and integrates better with
+                        fundamental web app technologies such as service workers. Modern web frameworks also provide
+                        abstractions for Ajax.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
                 <div class="fold-panel">
                   <div class="fold-header" onclick="foldHandleClcik(this)">
-                    <h3>Here's an example: While all users can see this message, User A cannot see this information.</h3>
+                    <h3>Explore the examples below to see how hyperlinks and AJAX facilitate seamless web navigation and content management:</h3>
                     <span class="arrow"></span>
                   </div>
                   <div class="fold-body">
-                    <h5>Using hyperlinks, if the URL contains the parameter "name" with a value of "A", then hide the content.</h5>
+                    <p>Consider the following scenarios: All visitors can see a public message, but for user-specific data, 
+                      we might want to tailor the content. Here's how hyperlinks and AJAX work in tandem to create a differentiated 
+                      user experience. Below is an interactive example using AJAX to conditionally display content based on the 
+                      user's identity.<br />
+                      For example, while all users can see this message, User A cannot see this information.<br />
+                      <ul>
+                        <li>
+                          <strong> Using hyperlinks, we can direct users based on URL query parameters. For instance, if the URL contains 
+                          the parameter "name" with a value of "A", then it can conditionally hide content when the page loads.</strong>
+                        </li>
+                    </p>
                     <pre>
 <code>
   &lt;a href="/index.html?name=A"&gt;"Go ahead and give it a try."&lt;/a&gt;
@@ -89,7 +126,13 @@
                     <div>
                       <a href="/index.html?name=A">"Go ahead and give it a try."</a>
                     </div>
-                    <h5>Using AJAX, if the requested data contains an ID of 1, then hide the content.</h5>
+                    <p>
+                    <br />
+                      <li>
+                        <strong> Using AJAX, we can update the content dynamically based on user actions or data conditions, such as hiding content if a user with a specific ID is detected. 
+                        In this example, if the requested data contains an ID of 1, then hide the content.</strong>
+                      </li>
+                    </p>
                     <pre>
 <code>
   $.ajax({
@@ -108,6 +151,7 @@
                 </div>
                 </p>
               </div>
+            </ol>
               <p>Links stand out from the surrounding text by being underlined and in blue text. Tap or click a link to
                 activate it, or if you use a keyboard, press Tab until the link is in focus and hit Enter or Spacebar.
               </p>
@@ -171,9 +215,9 @@
           </div>
         </use-card>
       </section>
-      <section aria-labelledby="implentationInHTML">
+      <section aria-labelledby="implementationInHTML">
         <use-card>
-          <div id="implentationInHTML" class="card-header" slot="header"><a href="#implentationInHTML">Hyperlink Implentation in HTML</a></div>
+          <div id="implementationInHTML" class="card-header" slot="header"><a href="#implementationInHTML">Hyperlink Implementation in HTML</a></div>
           <div class="section-content">
             <p>A basic link is created by wrapping the text or other content inside an <a
                 href="/en-US/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a> element and using the <a
